@@ -4,3 +4,4 @@ Anomaly Detection is a hot topic in recent years, where the goal is to identify 
 
 # Goal 
 The goal is to share anomaly detection ideas in production environment. Productuion enviromnt can be any type of manufacturing industry where speacific type of materials are produced.
+# Anomaly detection with one-class svm
