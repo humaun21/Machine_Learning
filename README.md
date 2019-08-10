@@ -4,4 +4,6 @@ Anomaly Detection is a hot topic in recent years, where the goal is to identify 
 
 # Goal 
 The goal is to share anomaly detection ideas in the production environment. Production environment can be any manufacturing industry where specific types of materials are produced.
-# Anomaly detection with one-class svm
+
+# Dataset
+The dataset used for this tutorial is from [Stream Machine Learning (Streaml) Open Challenge 2017-2018](https://project-hobbit.eu/open-challenges/streaml-open-challenge_details/). For details go the provided source. 
