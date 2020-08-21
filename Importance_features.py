@@ -25,7 +25,7 @@ print('Start Time: ', str(datetime.now()))
 
 import csv
 import gc
-#Read large file by chunks (e.g each time 5000 samples/rows)
+# Read large file by chunks (e.g each time 5000 samples/rows)
 def get_data(directory, file_list, chunksize, data_type_list = None, use_col_list = None):
     # type: (str, list, list, list) -> pd.DataFrame
     """
@@ -57,8 +57,9 @@ def get_data(directory, file_list, chunksize, data_type_list = None, use_col_lis
         gc.collect()
 
     return data
-#Load data from csv file
-train = get_data('/home/abedin/bosh_analysis/important_feature/input/', ['train_numeric.csv'], 50000)
+    
+# Load data from csv file
+train = get_data('/home/rashid/bosh_analysis/important_feature/input/', ['train_numeric.csv'], 50000)
 print(train.head())
 y_train = train['Response']
 train=train.drop(['Response'], axis =1)
@@ -95,7 +96,7 @@ def modelfit(alg, X_all, y_all, useTrainCV=True, cv_folds=3, early_stopping_roun
     print('Important Features:')
     for index in sorted_idx:
         print([columns[index], alg.feature_importances_[index]])
-#Parameters
+# Parameters
 xgb1 = XGBClassifier(learning_rate=0.05,
                      base_score=0.0056,
                      n_estimators=50,
@@ -106,7 +107,7 @@ xgb1 = XGBClassifier(learning_rate=0.05,
                      objective='binary:logistic',
                      nthread=4,
                      scale_pos_weight=3)
-# Lets go for model training                     
+# Let's go for model training                     
 modelfit(xgb1, X_all, y_train)
 
 
