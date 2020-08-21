@@ -7,7 +7,6 @@ import numpy as np
 import pandas as pd
 from scipy.stats import skew, boxcox
 from sklearn.preprocessing import StandardScaler
-#from pandas.core.common import array_equivalent
 import pickle
 import xgboost as xgb
 from xgboost.sklearn import XGBClassifier
